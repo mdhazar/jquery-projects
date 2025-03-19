@@ -4,11 +4,10 @@ $(document).ready(function () {
   $("#add-btn").click(addTodo);
 
   function addTodo() {
-    const todoText = $("#todo-input").val();
-    if (todoText) {
+    if ($("#todo-input").val()) {
       $("#todo-list").append(`
         <li>
-          <span>${todoText}</span>
+          <span>${$("#todo-input").val()}</span>
 
         </li>
       `);
