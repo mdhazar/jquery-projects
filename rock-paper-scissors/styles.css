@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 60vh;
+  margin: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: burlywood;
+}
+
+.game {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.choice {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+button {
+  padding: 1rem;
+  border-radius: 30px;
+  color: darkcyan;
+  font-size: 1.5rem;
+  border-style: none;
+  background-color: bisque;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(247, 216, 175);
+}
+.score {
+  display: flex;
+  margin-top: 30px;
+  gap: 3em;
+  justify-content: center;
+  padding: 30px 20px 80px 20px;
+  background-color: blanchedalmond;
+  width: 600px;
+  border-radius: 70px;
+}
+p {
+  padding: 10px 60px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+}
+.computer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.computerScore {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: aquamarine;
+  border: 1px solid red;
+}
+.playerScore {
+  width: 200px;
+  height: 50px;
+  background-color: aquamarine;
+  border: 1px solid red;
+  border-radius: 30px;
+}
