@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  height: 60vh;
+  height: 80vh;
   margin: 0;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -64,16 +64,30 @@ p {
   gap: 10px;
 }
 .computerScore {
+  display: flex;
   width: 200px;
   height: 50px;
   border-radius: 30px;
   background-color: aquamarine;
   border: 1px solid red;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: goldenrod;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .playerScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
   background-color: aquamarine;
   border: 1px solid red;
   border-radius: 30px;
+  font-size: 1.5rem;
+  color: goldenrod;
 }
