@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #calculator {
+        width: 300px;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      #display {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        text-align: right;
+        padding: 5px;
+        font-size: 20px;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+      }
+      button {
+        padding: 15px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <input type="text" id="display" readonly />
+      <div class="buttons">
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="+">+</button>
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="-">-</button>
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="*">×</button>
+        <button data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button data-value="=">=</button>
+        <button data-value="/">÷</button>
+        <button data-value="clear">C</button>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        let currentInput = "";
+        $("button[data-value]")
+          .not('[data-value="="], [data-value="clear"]')
+          .click(function () {
+            const value = $(this).data("value");
+            currentInput += value;
+            $("#display").val(currentInput);
+          });
+
+        $('[data-value="clear"]').click(function () {
+          currentInput = "";
+          $("#display").val("");
+        });
+
+        $('[data-value="="]').click(function () {
+          try {
+            const expression = currentInput
+              .replace(/×/g, "*")
+              .replace(/÷/g, "/");
+            const result = eval(expression);
+            $("#display").val(result);
+            currentInput = result.toString();
+          } catch (error) {
+            $("#display").val("Error");
+            currentInput = "";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

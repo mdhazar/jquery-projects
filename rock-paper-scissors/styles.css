@@ -10,6 +10,7 @@ body {
   margin: 0;
   text-align: center;
   font-family: Arial, sans-serif;
+
   background-color: burlywood;
 }
 
@@ -30,7 +31,7 @@ button {
   color: darkcyan;
   font-size: 1.5rem;
   border-style: none;
-  background-color: bisque;
+  background: bisque;
   cursor: pointer;
 }
 button:hover {
@@ -42,7 +43,8 @@ button:hover {
   gap: 3em;
   justify-content: center;
   padding: 30px 20px 80px 20px;
-  background-color: blanchedalmond;
+  background: linear-gradient(blanchedalmond, rgb(253, 201, 124));
+
   width: 600px;
   border-radius: 70px;
 }
@@ -68,8 +70,8 @@ p {
   width: 200px;
   height: 50px;
   border-radius: 30px;
-  background-color: aquamarine;
-  border: 1px solid red;
+  background-color: rgba(127, 255, 212, 0.392);
+  border: 1px solid rgb(255, 208, 0);
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
@@ -85,8 +87,8 @@ button:disabled {
   align-items: center;
   width: 200px;
   height: 50px;
-  background-color: aquamarine;
-  border: 1px solid red;
+  background-color: rgba(127, 255, 212, 0.392);
+  border: 1px solid rgb(255, 208, 0);
   border-radius: 30px;
   font-size: 1.5rem;
   color: goldenrod;

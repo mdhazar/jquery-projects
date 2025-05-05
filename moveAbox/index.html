@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOX</title>
+    <style>
+      p {
+        height: 50px;
+        width: 50px;
+        background-color: bisque;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <script>
+      let box = document.querySelector("p");
+      let x = 100,
+        y = 100;
+
+      box.style.left = x + "px";
+      box.style.top = y + "px";
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight") x += 10;
+        if (event.key === "ArrowLeft") x -= 10;
+        if (event.key === "ArrowDown") y += 10;
+        if (event.key === "ArrowUp") y -= 10;
+
+        box.style.left = x + "px";
+        box.style.top = y + "px";
+      });
+    </script>
+  </body>
+</html>
